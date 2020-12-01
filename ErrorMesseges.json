@@ -1,0 +1,5 @@
+{
+    "IndexError": "[ERROR MESSAGE] You need to provide the file path",
+    "FileNotFoundError": "[ERROR MESSAGE] File path is wrong or there is now such file in the path",
+    "GenericError": "[ERROR MESSAGE] Unhandled error"
+}
