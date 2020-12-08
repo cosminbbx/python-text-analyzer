@@ -101,7 +101,22 @@ def isPhoneNumber(text):
         return False
 
 def isCNP(text):
-    if len(text) == 13:
-        return hasOnlyNumbers(text)
+    if len(text) == 13 and hasOnlyNumbers(text):
+        return validateCNP(text)
     else:
         return False
+
+def validateCNP(text):
+    S = int(text[0])
+    if S < 1 or S > 8: return False
+
+    LL = int(text[3]+text[4])
+    if LL < 1 or LL > 12: return False
+
+    ZZ = int(text[5]+text[6])
+    if ZZ < 1 or ZZ > 31: return False
+
+    JJ = int(text[7]+text[8])
+    if JJ < 1 or JJ > 52: return False
+
+    return True
